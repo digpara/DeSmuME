@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="D3D9_Shaders|Win32">
+      <Configuration>D3D9_Shaders</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B9E25974-F5D0-4813-8ACA-6C4EBD8D4879}</ProjectGuid>
+    <RootNamespace>D3D_Shaders</RootNamespace>
+    <ProjectName>D3D_Shaders</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemGroup>
+    <FxCompile Include="PixelShader_Debug.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">3.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="PixelShader_Gaussian.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">3.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="PixelShader_Gaussian_and_Sharpness.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">3.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="PixelShader_TrimmedMean.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">3.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="PixelShader_TrimmedMean_and_Sharpness.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">3.0</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PixelShader.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D3D9_Shaders|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

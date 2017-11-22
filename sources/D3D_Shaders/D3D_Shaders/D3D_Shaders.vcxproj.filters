@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FxCompile Include="PixelShader_Debug.hlsl" />
+    <FxCompile Include="PixelShader_Gaussian.hlsl" />
+    <FxCompile Include="PixelShader_Gaussian_and_Sharpness.hlsl" />
+    <FxCompile Include="PixelShader_TrimmedMean.hlsl" />
+    <FxCompile Include="PixelShader_TrimmedMean_and_Sharpness.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PixelShader.hlsli" />
+  </ItemGroup>
+</Project>
